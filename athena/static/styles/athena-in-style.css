@@ -46,11 +46,14 @@ header span {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
     color: white;
     padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .subject-card h4 {
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .subject-card .progress-value {
@@ -88,4 +91,201 @@ header span {
     background-color: #FF00FF;
     height: 5px;
     width: 50%;
+}
+
+.subject-card:hover, .subject-card:focus{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.subject-card:active {
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% */
+}
+
+.calendar-container {
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.calendar-container h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FF00FF;
+    text-align: center;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas iguales */
+    gap: 5px;
+    padding: 20px;
+    color: white;
+}
+
+.calendar .day {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    height: 20px;
+}
+
+.calendar .day:not(.header):hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.calendar .header {
+    font-weight: bold;
+}
+
+.calendar .booked {
+    color: #FF00FF;
+}
+
+.calendar .booked:after {
+    content: "\2022";
+    color: #FF00FF;
+    display: block;
+    font-weight: 900;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF00FF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
+}
+
+.schedule-container .date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.schedule-container .date-container .date {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.schedule-container .date-container .activities-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.schedule-container .date-container .activities-container span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #18003D;
+}
+
+.schedule-container .view-all, .inbox-container .view-all{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.view-all a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 7px;
+    border-radius: 7px;
+}
+
+
+.schedule-container .view-all a {
+    background-color: white;
+    color: #18003D;
+}
+
+.schedule-container .view-all a:hover, .schedule-container .view-all a:focus {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.schedule-container .view-all a:active {
+    color: #FF00FF;
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% */
+}
+
+.inbox-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
+}
+
+.inbox-container h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #FF00FF;
+    text-align: center;
+}
+
+.inbox-container .message {
+    margin-bottom: 20px;
+    padding: 2px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-container .message:hover {
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: scale(1.01);
+    background-color: rgba(0,0,0,0.05);
+}
+
+.inbox-container .message .date {
+    font-size: 15px;
+    font-weight: 600;
+    color: #FF00FF;
+    margin-bottom: 15px;;
+}
+
+.inbox-container .message .involved {
+    font-size: 15px;
+    font-weight: 400;
+    color: #18003D;
+    font-style: italic;    
+}
+
+.inbox-container .message .subject {
+    font-size: 15px;
+    font-weight: 700;
+    color: #18003D;
+}
+
+.inbox-container .message .excerpt {
+    font-size: 15px;
+    font-weight: 300;
+    color: #18003D;
+}
+
+.inbox-container .view-all a {
+    background-color: #FF00FF;
+    color: white;
+}
+
+.inbox-container .view-all a:hover, .inbox-container .view-all a:focus {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    cursor: pointer;
 }
