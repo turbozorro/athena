@@ -1,0 +1,118 @@
+body {
+    background: #3B1A4F;
+    font-family: Arial;
+}
+
+.main-home-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4E2269; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
+    min-width: 370px;
+    min-height: 595px;
+    justify-content: center;
+    position: relative;
+}
+
+.login-container .passreset {
+    margin-top: 150px
+}
+
+.login-container .passreset a {
+    color: #FF00FF;
+    text-decoration: none;
+}
+
+/* Aclarar el color al pasar el mouse sobre el botón */
+.login-container .passreset a:hover {
+    filter: brightness(1.2); /* Aumenta el brillo en un 20% */
+    text-decoration: underline;
+}
+
+/* Transformación al hacer clic sobre el botón */
+.login-container .passreset a:active {
+    opacity: 0.7;
+}
+
+.logo-container {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.form-container {
+    width: 100%; /* Ancho del 100% */
+}
+/* Estilo adicional para los elementos del formulario */
+.form-container form {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin-top: 20px; /* Espacio entre los elementos del formulario */
+    width: 100%; /* Ancho del formulario al 100% */
+}
+
+.form-container form input, .form-container form button {
+    margin-bottom: 10px; /* Espacio entre los elementos del formulario */
+    width: 80%; /* Ancho del 100% */
+}
+
+.form-container form input {
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #FF00FF;
+    background-color: transparent;
+    color: #ffffff;
+    text-transform: lowercase;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+    letter-spacing: 0px;
+}
+
+.form-container form input::placeholder {
+    color: #ffffff; /* Color del placeholder rojo */
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.form-container form input:focus::placeholder {
+    color: transparent; /* Hace que el placeholder sea transparente cuando el input está en foco */
+}
+
+.form-container form input:focus,
+.form-container form input:active {
+    outline: none; /* Elimina el borde alrededor del input en foco o activo */
+}
+
+.form-container form button {
+    height: 50px;
+    background-color: #FF00FF;
+    color: #3B1A4F;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+/* Aclarar el color al pasar el mouse sobre el botón */
+button:hover {
+    filter: brightness(1.2); /* Aumenta el brillo en un 20% */
+}
+
+/* Transformación al hacer clic sobre el botón */
+button:active {
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% */
+}

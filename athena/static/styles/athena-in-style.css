@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background: #3B1A4F;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.main-home-container {
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+    padding: 50px 115px 0; /* Añade un poco de espacio a los lados */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.column {
+    width: calc(33.33% - 13.33px); /* Calcula el ancho de cada columna (33.33%) menos el espacio entre ellas */
+    margin-right: 20px; /* Espacio entre columnas */
+    border: none;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    justify-content: space-around;
+}
+header i {
+    font-size: 24px;
+}
+
+header span {
+    margin-right: 50px;
+}
+
+.subject-card {
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3); /* Sombra leve exterior */
+    color: white;
+    padding: 10px 20px;
+}
+
+.subject-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.subject-card .progress-value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subject-card .grade {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.subject-card .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subject-card .card-body .progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.subject-card .card-body .progress-container .progress-bar {
+    background-color: #18003D;
+    height: 5px;
+    width: 100%;
+    margin-left: 10px;;
+}
+
+.subject-card .card-body .progress-container .progress-bar .progress {
+    background-color: #FF00FF;
+    height: 5px;
+    width: 50%;
+}
