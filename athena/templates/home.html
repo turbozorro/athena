@@ -13,10 +13,10 @@
     <div class="header-container">
         <header>
             <figure class="logo-container">
-                <img src="{% static '/images/athena-logo.png' %}" alt="Athena Logo">
-                <span class="menu-btn"><i class="fa-solid fa-bars"></i></span>
+            <img src="{% static '/images/athena-logo.png' %}" alt="Athena Logo">
+            <span class="menu-btn"><i class="fa-solid fa-bars"></i></span>
             </figure>
-            <span class="welcome">Bienvenido, <strong>Juan Pablo</strong></span>
+            <span class="welcome">Bienvenido, <strong>{{ request.user.first_name }}</strong></span>
         </header>
     </div>
     <div class="menu-container hidden">
