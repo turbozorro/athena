@@ -3,6 +3,9 @@
 body {
     background: #3B1A4F;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .main-home-container {
@@ -33,13 +36,15 @@ header .logo-container {
     align-items: center;
     width: 250px;
     justify-content: space-around;
+    z-index: 3;
 }
-header i {
+header .menu-btn {
     font-size: 24px;
 }
 
-header span {
+header .welcome {
     margin-right: 50px;
+    z-index: 3;
 }
 
 .subject-card {
@@ -288,4 +293,71 @@ header span {
     transform: scale(1.05);
     transition: transform 0.3s;
     cursor: pointer;
+}
+
+.menu-container {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 63%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: left;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+.menu-container.hidden {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    opacity: 0.5;;
+    transform: translateX(-100%);
+}
+
+.menu-container .menu-body {
+    background-color: #3B1A4F;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 55px;
+    margin-left: 50px;
+    margin-top: 120px;
+    padding: 20px 30px;
+    width: 330px;
+}
+
+.menu-container .menu-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-container .menu-body ul li {
+    font-size: 14px;
+    letter-spacing: 13px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.menu-container .menu-body ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+}  
+
+.menu-container .menu-body ul li a:hover, .menu-container .menu-body ul li a:focus {
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.menu-container .menu-body ul li a:active {
+    color: #FF00FF;
+    transform: scale(0.95); 
 }

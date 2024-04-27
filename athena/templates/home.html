@@ -14,10 +14,21 @@
         <header>
             <figure class="logo-container">
                 <img src="{% static '/images/athena-logo.png' %}" alt="Athena Logo">
-                <i class="fa-solid fa-bars"></i>
+                <span class="menu-btn"><i class="fa-solid fa-bars"></i></span>
             </figure>
-            <span>Bienvenido, <strong>Juan Pablo</strong></span>
+            <span class="welcome">Bienvenido, <strong>Juan Pablo</strong></span>
         </header>
+    </div>
+    <div class="menu-container hidden">
+        <nav class="menu-body">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Calendario</a></li>
+                <li><a href="#">Evaluaciones</a></li>
+                <li><a href="#">Bibilioteca</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </nav>
     </div>
     <div class="main-home-container">
         <div class="column" id="subjects">
@@ -200,6 +211,7 @@
             </div>
         </div>
     </div>
+    <script src="{% static '/scripts/actions.js' %}"></script>
 
 </body>
 </html>

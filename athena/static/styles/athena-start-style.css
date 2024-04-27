@@ -82,7 +82,7 @@ body {
 }
 
 .form-container form input::placeholder {
-    color: #ffffff; /* Color del placeholder rojo */
+    color: #ffffff; 
     letter-spacing: 13px;
     text-transform: uppercase;
     opacity: 0.75;
