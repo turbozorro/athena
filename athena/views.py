@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 # Create your views here.
 def startup(request):
@@ -18,4 +19,8 @@ def startup(request):
 
 @login_required
 def home(request):
-    return render(request, 'home.html')
+    user_subjects = UserSubject.objects.filter(user=request.user)
+    context = {
+        'user_subjects': user_subjects,
+    }
+    return render(request, 'home.html', context)
