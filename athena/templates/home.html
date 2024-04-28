@@ -26,76 +26,26 @@
                 <li><a href="#">Calendario</a></li>
                 <li><a href="#">Evaluaciones</a></li>
                 <li><a href="#">Bibilioteca</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="{% url 'logout' %}?next=/athena">Salir</a></li>
             </ul>
         </nav>
     </div>
     <div class="main-home-container">
         <div class="column" id="subjects">
+        {% for user_subject in user_subjects %}
             <div class="subject-card">
-                <h4>Matemáticas Básicas</h4>
+                <h4>{{ user_subject.subject.name }}</h4>
                 <div class="card-body">
                     <div class="progress-container">
-                        <span class="progress-value">50%</span>
+                        <span class="progress-value">{{ user_subject.completion|floatformat:"0" }}%</span>
                         <div class="progress-bar">
-                            <div class="progress" val="50"></div>
+                            <div class="progress" val="{{ user_subject.completion|floatformat:"0" }}" style="width: {{ user_subject.completion }}%;"></div>
                         </div>
                     </div>
-                    <span class="grade">4.5</span>
+                    <span class="grade">{{ user_subject.grade|floatformat:"1" }}</span>
                 </div>
-            </div>
-            <div class="subject-card">
-                <h4>Programación</h4>
-                <div class="card-body">
-                    <div class="progress-container">
-                        <span class="progress-value">45%</span>
-                        <div class="progress-bar">
-                            <div class="progress" val="45"></div>
-                        </div>
-                    </div>
-                    <span class="grade">4.8</span>
-                </div>
-            </div>
-            
-            <div class="subject-card">
-                <h4>Probabilidad y Estadística</h4>
-                <div class="card-body">
-                    <div class="progress-container">
-                        <span class="progress-value">52%</span>
-                        <div class="progress-bar">
-                            <div class="progress" val="52"></div>
-                        </div>
-                    </div>
-                    <span class="grade">4.3</span>
-                </div>
-            </div>
-            
-            <div class="subject-card">
-                <h4>Ingeniería Web II</h4>
-                <div class="card-body">
-                    <div class="progress-container">
-                        <span class="progress-value">60%</span>
-                        <div class="progress-bar">
-                            <div class="progress" val="60"></div>
-                        </div>
-                    </div>
-                    <span class="grade">4.5</span>
-                </div>
-            </div>
-            
-            <div class="subject-card">
-                <h4>Ética profesional</h4>
-                <div class="card-body">
-                    <div class="progress-container">
-                        <span class="progress-value">49%</span>
-                        <div class="progress-bar">
-                            <div class="progress" val="49"></div>
-                        </div>
-                    </div>
-                    <span class="grade">4.8</span>
-                </div>
-            </div>
-            
+            </div>     
+            {% endfor %}       
         </div>
         <div class="column" id="dates">
             <div class="calendar-container">
