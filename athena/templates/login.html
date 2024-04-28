@@ -15,9 +15,17 @@
                 <img src="{% static '/images/athena-logo.png' %}" alt="Athena Logo">
             </figure>
             <section class="form-container">
-                <form action="">
+                <form action="{% url 'startup' %}"  method= "post">
+                    {% csrf_token %}
                     <input type="text" name="username" id="username" placeholder="email">
                     <input type="password" name="password" id="password" placeholder="contraseña">
+                    {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                                <span class='login-failed'>&#9888; {{ message }} &#9888;</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                     <button type="submit">Login</button>
                 </form>
             </section>
