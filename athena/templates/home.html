@@ -31,7 +31,7 @@
         </nav>
     </div>
     <div class="main-home-container">
-        <div class="column" id="subjects">
+        <div class="column md-50" id="subjects">
         {% for user_subject in user_subjects %}
             <div class="subject-card">
                 <h4>{{ user_subject.subject.name }}</h4>
@@ -47,7 +47,7 @@
             </div>     
             {% endfor %}       
         </div>
-        <div class="column" id="dates">
+        <div class="column md-50" id="dates">
             <div class="calendar-container">
                 <h4>Abril</h4>
                 <div class="calendar">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div class="column">
+        <div class="column md-100">
             <div class="inbox-container">
                 <h4>Bandeja de entrada</h4>
                 <div class="message-container">
